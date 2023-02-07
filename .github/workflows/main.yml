@@ -28,7 +28,8 @@ jobs:
           uses: 'azure/aci-deploy@v1'
           with:
             resource-group: ${{ secrets.RESOURCE_GROUP }}
-            dns-name-label: ${{ secrets.ACI_DNS_LABEL }}${{ github.run_number }}
+            #dns-name-label: ${{ secrets.ACI_DNS_LABEL }}${{ github.run_number }}
+            dns-name-label: ${{ secrets.ACI_DNS_LABEL }}
             image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/app-nodejs-aks:${{ github.sha }}
             registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }}
             registry-username: ${{ secrets.REGISTRY_USERNAME }}

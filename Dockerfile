@@ -10,6 +10,6 @@ COPY . /web
 WORKDIR /web
 RUN npm install
 
-EXPOSE 8089
+EXPOSE 80
 
 CMD [ "node","server.js" ]
